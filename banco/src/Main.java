@@ -10,6 +10,7 @@ void main() {
     String acao = scanner.nextLine();
 
 
+
     switch (acao) {
         case "0":
             System.out.println("Você saiu do app.");
@@ -17,29 +18,31 @@ void main() {
         case "1":
             System.out.println("vamos cadastrar:");
             System.out.println("Insira seu CPF");
-                String cpfC = scanner.nextLine();
-                        while (cpfC.length() != 11) {
+                String cpfCadastrado = scanner.nextLine();
+                        while (cpfCadastrado.length() != 11) {
                             System.out.println("CPF inexistente, tente novamente");
-                            cpfC = scanner.nextLine();
+                            cpfCadastrado = scanner.nextLine();
                         }
             System.out.println("Digite uma Senha");
-                String senhaC = scanner.nextLine();
-                        while (senhaC.length() != 8) {
+                String senhaCadastrada = scanner.nextLine();
+                        while (senhaCadastrada.length() != 8) {
                             System.out.println("senha invalida, tente novamente");
-                            senhaC = scanner.nextLine();
+                            senhaCadastrada = scanner.nextLine();
                         }
             System.out.println("Conta Cadastrada com sucesso!");
         break;
         case "2":
             System.out.println("Digite seu CPF:");
-            while (cpfC.length() != 11) {
+            cpfCadastrado = scanner.nextLine();
+            while (cpfCadastrado.length() != 11) {
                 System.out.println("CPF inexistente, tente novamente");
-                cpfC = scanner.nextLine();
+                cpfCadastrado = scanner.nextLine();
             }
             System.out.println("digite sua senha:");
-            while (senhaC.length() != 8) {
+            senhaCadastrada = scanner.nextLine();
+            while (senhaCadastrada.length() != 8) {
                 System.out.println("senha invalida, tente novamente");
-                senhaC = scanner.nextLine();
+                senhaCadastrada = scanner.nextLine();
             }
             break;
         default:
@@ -47,5 +50,31 @@ void main() {
             break;
     }
 
-    if ()
+    boolean logado = true;
+
+    while (logado) {
+        System.out.println("1- Ver saldo");
+        System.out.println("2- Fazer Transferência");
+        System.out.println("3- Depositar");
+        System.out.println("4- Sacar");
+        System.out.println("5- Extrato");
+        System.out.println("6- logout");
+
+        String opcao = scanner.nextLine();
+        double saldo = 0;
+        String[] contatos = new String[5];
+        contatos[0] = "mãe";
+        contatos[1] = "pai";
+
+        switch (opcao) {
+            case "1":
+                System.out.println("Seu saldo é " + saldo);
+            break;
+            case "2":
+                System.out.println("Deseja transferir para quem: ");
+                contatos[] = scanner.nextLine();
+                System.out.println("Deseja transferir qual quantia:");
+
+        }
+    }
 }
